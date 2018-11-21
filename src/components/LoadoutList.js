@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './loadoutList.css';
 
 class LoadoutList extends Component {
     constructor() {
@@ -12,7 +11,7 @@ class LoadoutList extends Component {
                 capacity: '32 Rounds',
                 faction: 'Human/UNSC',
                 id: 1,
-                img: 'https://vignette.wikia.nocookie.net/alteredrp-halorp/images/f/f9/Halo_5_Assault_Rifle.png/revision/latest?cb=20151012160152'
+                img: 'https://img.fireden.net/v/image/1476/91/1476915526627.png'
             }, {
                 name: 'Battle Rifle',
                 power: 105,
@@ -57,14 +56,20 @@ class LoadoutList extends Component {
             ],
         }
     }
+    addItemHandler(primaryItemData) {
+        let { addLoadoutItemFn } = this.props;
+        addLoadoutItemFn(primaryItemData)
+    }
+
     render() {
-        let { addLoadoutItemFn } = this.props
+
         let mappedPrimaryWeapon = this.state.primaryWeapon.map(primary => {
+
             return (
                 <div className='individualPrimary' key={primary.id}>
                     <img alt={primary.name} src={primary.img} />
                     <span>{primary.name}</span>
-                    <button onClick={() => { this.addLoadoutItemFn(primary.name, primary.img, primary.id) }}>Add</button>
+                    <button className='mainButton' onClick={() => this.addItemHandler(primary)}>Add</button>
                 </div>
             )
         })

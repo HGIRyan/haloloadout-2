@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './loadoutList.css';
 import LoadoutList from './LoadoutList';
 
 export default class PrimaryDrop extends Component {
@@ -32,7 +31,15 @@ export default class PrimaryDrop extends Component {
 
         }
     }
+    // handleSelection(name,img,id){
+    //     console.log('Info from parent', name,img,id)
+    //     // this.addLoadoutItemFn(name,img,id)
+    // }
+    addLoadoutItem(primaryItem) {
+        this.props.addLoadoutFn(primaryItem)
+        console.log('Running at loadout Item:', primaryItem)
 
+    }
     render() {
         return (
             <div>
@@ -48,10 +55,9 @@ export default class PrimaryDrop extends Component {
                                 ref={(element) => {
                                     this.dropdownMenu = element;
                                 }}>
+                                <LoadoutList addLoadoutItemFn={e => this.addLoadoutItem(e)} />
 
-                                <button id='button' ><LoadoutList addLoadoutItemFn={this.addLoadoutItem} /> Primary </button>
-                                
-                                
+                                {/* <LoadoutList /> */}
                             </div>
                         )
                         : (

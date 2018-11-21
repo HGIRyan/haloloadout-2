@@ -1,11 +1,165 @@
-.App {
-  text-align: center;
+/* App.js Main Divs */
+body {
+  background-color: #111C3C;
 }
+.App {
+  background-image: url('https://content.halocdn.com/media/Default/community/blogs/3840_haloinfinite_e318_ring-96bf71d241184bfb8b1f1b0c3bb8a1a0.png');
+  height: auto;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 10vh;
+  color: white;
+  position: sticky;
+  position: fixed 10;
+  overflow: hidden;
+  top: 0;
+}
+
+.header:hover {
+  background-color: white;
+opacity: 0.2;
+transition: all 800ms ease-out;
+}
+
+.logo{
+  display: flex;
+  height: 75%;
+  width: 35%;
+  align-self: center;
+  padding-right: 13.9%;
+}
+.headerLetter {
+  display: flex;
+  align-self: center;
+  height: 75%;
+  width: 65%;
+}
+/* .subscribe{
+height: 100px;
+width: 300px;
+} */
 
 img {
   display: flex;
   flex-wrap: wrap;
-  height: 50px;
-  width: 100px;
+  max-height: 100px;
+  max-width: 300px
+}
 
+h2 {
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.mainButton {
+  background-color: Transparent;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+    
+}
+.mainButton:hover {
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #152C9F;
+  transition: all 800ms ease-out;
+}
+
+
+.loadoutSelection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* height: 100%; */
+}
+
+h3 {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.individualSecondary {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.individualPrimary {
+  /* display: flex; */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.mainMiddle{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background-color: grey; */
+}
+/* Primary Weapon Div */
+.primary { 
+  display: flex;
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+}
+
+.primaryBox{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wholeloadout {
+  width: 50vw;
+  height: 20vh;
+}
+/* Secondary Weapon Div */
+.secondary{
+  display: flex;
+  width: 100%;
+  height: auto;
+  /* background-color: green; */
+}
+
+
+/* Im alreader spacer */
+.spacer {
+  height: 40vh;
 }
