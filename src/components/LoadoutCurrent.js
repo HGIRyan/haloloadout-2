@@ -26,6 +26,7 @@ class loadoutCurrent extends Component {
     addLoadoutItem(primaryItem) {
         console.log('Dont put a plus', primaryItem)
         if (this.state.loadoutCurrent.length < 1) {
+            console.log(primaryItem)
             axios.post('/api/loadout', primaryItem).then(response => {
                 this.setState({
                     loadoutCurrent: response.data

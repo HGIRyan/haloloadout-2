@@ -40,7 +40,7 @@ class SecondaryList extends Component {
         let mappedSecondaryWeapon = this.state.SecondaryWeapon.map(secondary =>{
             return (
                 <div className='individualSecondary' key={secondary.id}>
-                    <img alt={secondary.name} src={secondary.img}/>
+                    <img className='individualSecondaryImg' alt={secondary.name} src={secondary.img}/>
                     <span>{secondary.name}</span>
                     <button className='mainButton' onClick={()=> this.addItemHandler(secondary)}>Add</button>
                 </div>

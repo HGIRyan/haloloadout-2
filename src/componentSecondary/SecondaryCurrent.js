@@ -13,7 +13,8 @@ class SecondaryCurrent extends Component {
         this.addSecondaryItem = this.addSecondaryItem.bind(this);
     }
     componentDidMount() {
-        axios.get('/api/secondary').then(response => {this.setState({
+        axios.get('/api/secondary').then(response => {
+            this.setState({
                 SecondaryCurrent: response.data
             })
         })
@@ -35,24 +36,24 @@ class SecondaryCurrent extends Component {
             })
         })
     }
-    render(){
-        let mappedSecondaryCurrent = this.state.SecondaryCurrent.map(secondaryItem =>{
-            return(
-                <div className='secondaryItem' key={secondaryItem.id}>  
-                <img alt={secondaryItem.name} src={secondaryItem.img}/>
-                <span><h2>{secondaryItem.name}</h2></span>
-                <button className='mainButton' onClick={()=>this.deleteSecondaryItem(secondaryItem.id)}>Delete</button>
+    render() {
+        let mappedSecondaryCurrent = this.state.SecondaryCurrent.map(secondaryItem => {
+            return (
+                <div className='secondaryItem' key={secondaryItem.id}>
+                    <img alt={secondaryItem.name} src={secondaryItem.img} />
+                    <span><h2>{secondaryItem.name}</h2></span>
+                    <button className='mainButton' onClick={() => this.deleteSecondaryItem(secondaryItem.id)}>Delete</button>
                 </div>
             )
         })
-        return(
+        return (
             <div>
                 <h2>Secondary Weapon</h2>
                 <div className='primaryBox'>
-                <div className='wholeloadout'>
-                    {mappedSecondaryCurrent} 
-                </div>
-                <SecondaryDrop addSecondaryFn={this.addSecondaryItem}/>
+                    <div className='wholeloadout'>
+                        {mappedSecondaryCurrent}
+                    </div>
+                    <SecondaryDrop addSecondaryFn={this.addSecondaryItem} />
                 </div>
             </div>
         )

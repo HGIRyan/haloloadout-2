@@ -64,6 +64,7 @@ module.exports = {
         res.status(200).send(grenade)
     },
     addLoadoutItem: (req, res) => {
+        console.log('running add in server',)
         const { name, img, id, power, capacity, faction } = req.body;
         loadout.push({ name, img, id, power, capacity, faction })
         res.status(200).send(loadout)
@@ -74,18 +75,23 @@ module.exports = {
       res.status(200).send(secondary);
     },
     updateGrenadeItem:(req,res)=>{
+        console.log('this is req:',req.params)
         const {name, img, id, power, firingMode, faction } = req.body;
         const updateGrenadeId = req.params.id;
         grenadeIndex = grenade.findIndex(grenade => grenade.id == updateGrenadeId);
-        let grenade = grenade[grenadeIndex]
+        grenade.splice(grenadeIndex, 1);
+        grenade.push(req.body);
 
-        grenade[grenadeIndex] = {
-            name:name,
-            img:img,
-            id:id,
-            power:power,
-            firingMode:firingMode,
-            faction:faction    
-        }
+        // let grenade = grenade[grenadeIndex]
+// console.log('log',grenade)
+//         grenade[grenadeIndex] = {
+//             name:name,
+//             img:img,
+//             id:id,
+//             power:power,
+//             firingMode:firingMode,
+//             faction:faction    
+//         }
+        res.status(200).send(grenade);
     }
 }

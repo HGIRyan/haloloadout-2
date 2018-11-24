@@ -67,7 +67,7 @@ class LoadoutList extends Component {
 
             return (
                 <div className='individualPrimary' key={primary.id}>
-                    <img alt={primary.name} src={primary.img} />
+                    <img className='individualPrimaryImg' alt={primary.name} src={primary.img} />
                     <span>{primary.name}</span>
                     <button className='mainButton' onClick={() => this.addItemHandler(primary)}>Add</button>
                 </div>
