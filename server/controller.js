@@ -36,7 +36,9 @@ let grenade = [{
 let loadout1 = [{
     message: 'Loadout 1'
 }]
-
+let spartan = [{
+    img: ''
+}]
 
 module.exports = {
     // Get / Read
@@ -59,6 +61,10 @@ module.exports = {
     readLoadout1: (req, res) => {
         console.log('Loadout1 Got')
         res.status(200).send(loadout1)
+    },
+    readSpartanImg: (req,res) =>{
+        console.log('Got the spartan')
+        res.status(200).send(spartan)
     },
     // Delete 
     deleteLoadoutItem: (req, res) => {

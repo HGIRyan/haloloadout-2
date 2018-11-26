@@ -5,6 +5,7 @@ import LoadoutCurrent from './components/LoadoutCurrent';
 import SecondaryCurrent from './componentSecondary/SecondaryCurrent';
 import GrenadeCurrent from './componentGrenade/GrenadeCurrent';
 import Subscribe from './Subscribe';
+import SpartanImg from './componentFiles/Halo/Halo_Api/SpartanImg/Gamertag'
 // import Loadout1 from './componentFiles/LoadoutNames/Loadout_1'
 // import Search from './componentFiles/weaponSearch/weaponSearch';
 
@@ -32,7 +33,7 @@ class App extends Component {
           <div className='grenade'><GrenadeCurrent/></div>
         </div>
         <div className='bottom'>
-          <div className='spartanDisplay'></div>
+          <div className='spartanDisplay'> <SpartanImg/> </div>
           <div className='stats'></div>
         </div>
         <div className='spacer' />

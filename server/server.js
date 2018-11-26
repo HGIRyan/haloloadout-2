@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const config = require('./../config');
+const config = require('../src/config');
 const controller = require('./controller')
 const axios = require('axios')
 const app = express();
@@ -12,6 +12,8 @@ app.get('/api/secondary', controller.readSecondary)
 app.get('/api/grenade', controller.readGrenade)
 app.get('/api/all', controller.readAll)
 app.get('/api/loadout1', controller.readLoadout1)
+app.get(`https://www.haloapi.com/profile/h5/profiles/{player}/spartan?`, controller.readSpartanImg)
+
 
 // Delete
 app.delete('/api/loadout/:id', controller.deleteLoadoutItem)
@@ -28,6 +30,6 @@ app.put('/api/loadout1', controller.updateLoadout1Name)
 
 
 
-const PORT = 3010
+const PORT = config.port
 app.listen(PORT, () => { console.log(`Docked at port: ${PORT}`) })
 
