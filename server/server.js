@@ -13,7 +13,9 @@ app.get('/api/grenade', controller.readGrenade)
 app.get('/api/all', controller.readAll)
 app.get('/api/loadout1', controller.readLoadout1)
 app.get(`https://www.haloapi.com/profile/h5/profiles/{player}/spartan?`, controller.readSpartanImg)
-
+app.get(`/api/haloimg`, controller.getHaloImg)
+app.get(`/api/haloimg2`, controller.getHaloImg2)
+app.get('/api/halometadata', controller.getSearch)
 
 // Delete
 app.delete('/api/loadout/:id', controller.deleteLoadoutItem)
@@ -27,6 +29,8 @@ app.post('/api/grenade', controller.addGrenadeItem)
 
 // Update
 app.put('/api/loadout1', controller.updateLoadout1Name)
+app.put('/api/gamertag', controller.updateGamertag)
+app.put('/api/gamertag2', controller.updateGamertag2)
 
 
 

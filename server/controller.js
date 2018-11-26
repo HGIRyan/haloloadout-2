@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const optionsList = require('./data/options.json');
+const config = require('../src/config');
 
 
 let loadout = [
@@ -12,7 +13,7 @@ let loadout = [
         capacity: '32 Rounds',
         faction: 'Human/UNSC',
         id: 1,
-        img: 'https://img.fireden.net/v/image/1476/91/1476915526627.png'
+        img: 'https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/assault-rifle-72bb6004e7804715935013ca745cadb9.png'
     },
 ]
 let secondary = [{
@@ -36,9 +37,8 @@ let grenade = [{
 let loadout1 = [{
     message: 'Loadout 1'
 }]
-let spartan = [{
-    img: ''
-}]
+let spartan = ''
+let spartan2 = ''
 
 module.exports = {
     // Get / Read
@@ -62,7 +62,7 @@ module.exports = {
         console.log('Loadout1 Got')
         res.status(200).send(loadout1)
     },
-    readSpartanImg: (req,res) =>{
+    readSpartanImg: (req, res) => {
         console.log('Got the spartan')
         res.status(200).send(spartan)
     },
@@ -105,7 +105,62 @@ module.exports = {
     // Put
     updateLoadout1Name: (req, res) => {
         const { message } = req.body;
-        loadout1.push({ message })
+        loadout1 = message
         res.status(name).send(loadout1)
+    },
+    updateGamertag: (req, res) => {
+        let { newGamertag } = req.body;
+        spartan = newGamertag
+        res.status(200).send(spartan)
+    },
+    getHaloImg: (req, res) => {
+        console.log('running halo img')
+        const primaryKey = config.primaryKey
+        const haloApiHeader = config.haloApiHeader
+        const statURL = config.baseStatURLHAPI
+        const baseURLHAPI = config.baseURLHAPI
+        console.log(haloApiHeader, primaryKey)
+        axios({
+            method: 'get',
+            url: `https://www.haloapi.com/stats/h5/servicerecords/arena?players=${spartan}&seasonId=2323b76a-db98-4e03-aa37-e171cfbdd1a4
+            `,
+            headers: { 'Ocp-Apim-Subscription-Key': '8d6efc99289a4fec9623f728191d6421' }
+        }).then(resp => {
+            res.status(200).send(resp.data)
+        })
+    },
+    updateGamertag2: (req, res) => {
+        let { newGamertag } = req.body;
+        spartan2 = newGamertag
+        res.status(200).send(spartan2)
+    },
+    getHaloImg2: (req, res) => {
+        console.log('running halo img')
+        const primaryKey = config.primaryKey
+        const haloApiHeader = config.haloApiHeader
+        const statURL = config.baseStatURLHAPI
+        const baseURLHAPI = config.baseURLHAPI
+        console.log(haloApiHeader, primaryKey)
+        axios({
+            method: 'get',
+            url: `https://www.haloapi.com/stats/h5/servicerecords/arena?players=${spartan2}&seasonId=2323b76a-db98-4e03-aa37-e171cfbdd1a4
+            `,
+            headers: { 'Ocp-Apim-Subscription-Key': '8d6efc99289a4fec9623f728191d6421' }
+        }).then(resp => {
+            res.status(200).send(resp.data)
+        })
+    },
+    getSearch: (req, res) => {
+        console.log('running halo img')
+        const primaryKey = config.primaryKey
+        const haloApiHeader = config.haloApiHeader
+        console.log(haloApiHeader, primaryKey)
+        axios({
+            method: 'get',
+            url: `https://www.haloapi.com/metadata/h5/metadata/weapons`,
+            headers: { 'Ocp-Apim-Subscription-Key': '8d6efc99289a4fec9623f728191d6421' }
+        }).then(resp => {
+            res.status(200).send(resp.data)
+        })
     }
 }

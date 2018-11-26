@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import '../../App.css';
 import axios from 'axios';
-import Primary from '../../components/LoadoutList';
-import Secondary from '../../componentSecondary/SecondaryList';
-import Grenade from '../../componentGrenade/GrenadeList';
+
 
 
 
@@ -14,7 +12,7 @@ class Search extends Component {
     }
 
     getInfo = () => {
-        axios.get('/api/all')
+        axios.get('/api/halometadata')
             .then(({ data }) => {
                 this.setState({
                     results: data.data
@@ -24,13 +22,13 @@ class Search extends Component {
 
     handleInputChange = () => {
         this.setState({
-            query: this.search.value
+            results: this.search.value
         }, () => {
-            if (this.state.query && this.state.query.length > 1) {
-                if (this.state.query.length % 2 === 0) {
+            if (this.state.results && this.state.results.length > 1) {
+                if (this.state.results.length % 2 === 0) {
                     this.getInfo()
                 }
-            } else if (!this.state.query) {
+            } else if (!this.state.results) {
             }
         })
     }
@@ -43,9 +41,7 @@ class Search extends Component {
                     ref={input => this.search = input}
                     onChange={this.handleInputChange}
                 />
-                <Primary results={this.state.results} />
-                <Secondary results={this.state.results} />
-                <Grenade results={this.state.results} />
+                
                 
             </form>
         )

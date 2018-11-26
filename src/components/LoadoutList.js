@@ -11,12 +11,12 @@ class LoadoutList extends Component {
                 capacity: '32 Rounds',
                 faction: 'Human/UNSC',
                 id: 1,
-                img: 'https://img.fireden.net/v/image/1476/91/1476915526627.png'
+                img: 'https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/assault-rifle-72bb6004e7804715935013ca745cadb9.png'
             }, {
                 name: 'Battle Rifle',
                 power: 105,
                 firingMode: 'Burst',
-                capacity: '36 Rounds',  
+                capacity: '36 Rounds',
                 faction: 'Human/UNSC',
                 id: 2,
                 img: 'https://i.pinimg.com/originals/ee/be/7e/eebe7e18e2f25da0b45c4bd0fb6b8a7c.png'
@@ -52,6 +52,24 @@ class LoadoutList extends Component {
                 faction: 'Alien/Covenent',
                 id: 6,
                 img: 'https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/needler-5690d414b19a4b2d83be15baaffa2fe9.png'
+            },
+            {
+                name: "LightRifle",
+                id: 7,
+                img: "https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/light-rifle-0c9fc99241fc414a85d6e210fed36d04.png"
+            }, {
+                name: "Storm Rifle",
+                img: "https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/covenant-storm-rifle-a440460289a54237832d39becaaf0046.png",
+                id: "2133511419",
+            },{
+                name: 'Supressor',
+                id:8,
+                img: "https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/suppressor-5ee536381da34f48abb542a29a51a898.png"
+            },
+            {
+                name:'Halo 2 Battle Rifle',
+                id: 4222743534,
+                img: "https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/halo-2-battle-rifle-967c07de6b78414eafa429be2eb7ab48.png"
             },
             ],
         }

@@ -10,6 +10,11 @@ body {
   background-size: cover;
   
 }
+.invisible {
+  opacity: 0;
+}
+
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -23,15 +28,16 @@ body {
 }
 
 .header:hover {
-  background-color: white;
-opacity: 0.2;
+  background-color: rgba(120, 120, 120, .8);
+  box-shadow: 0 0 0 1px white;
+
 transition: all 800ms ease-out;
 }
 
 .logo{
   display: flex;
   height: 75%;
-  width: 35%;
+  width: 45%;
   align-self: center;
   padding-right: 13.9%;
 }
@@ -49,8 +55,7 @@ width: 300px;
 img {
   display: flex;
   flex-wrap: wrap;
-  max-height: 100px;
-  max-width: 300px
+  max-width: 175px
 }
 
 
@@ -87,7 +92,15 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: rgba(120, 120, 120, .3);
+
+  /* background-color: rgba(120, 120, 120, .5); */
   /* height: 100%; */
+}
+.loadoutSelection:hover {
+  background-color: rgba(120, 120, 120, .5);
+  box-shadow: 0 0 0 1px white;
+    transition: all 800ms ease-out;
 }
 
 h3 {
@@ -138,7 +151,7 @@ h3:hover {
 .individualSecondaryImg {
   display: flex;
   flex-wrap: wrap;
-  max-height: 50px;
+  max-height: 100px;
   max-width: 300px
 }
 
@@ -157,7 +170,7 @@ h3:hover {
 .individualPrimaryImg {
   display: flex;
   flex-wrap: wrap;
-  max-height: 50px;
+  max-height: 100px;
   max-width: 300px
 }
 /* .loadoutitem {
@@ -172,7 +185,14 @@ h3:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: rgba(120, 120, 120, .3);
+
   /* background-color: grey; */
+}
+.mainMiddle:hover {
+    background-color: rgba(120, 120, 120, .5);
+    box-shadow: 0 0 0 1px white;
+    transition: all 800ms ease-out;
 }
 /* Primary Weapon Div */
 .primary { 
@@ -188,6 +208,7 @@ h3:hover {
   justify-content: space-evenly;
   padding-left: 5%;
   margin-left: 5%;
+  
 }
 .primaryBox:hover {
   border-radius: 8px;
@@ -230,11 +251,54 @@ h3:hover {
 .individualGrenadeImg {
   display: flex;
   flex-wrap: wrap;
-  max-height: 50px;
+  max-height: 95px;
   max-width: 300px
 }
 
+.input {
+  width: 10%px;
+  height: 15px;
+  font-size: 20px;
+  color: #fff;
+  padding-bottom: 6px;
+  border: none;
+  border-bottom: solid 1px #3fbaf9;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgb(91, 89, 89);
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.input:hover {
+  opacity: .5;
+  box-shadow: 0 0 0 1px rgb(120, 120, 120);
+  transition: all 800ms ease-out;
+}
 
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: rgba(120, 120, 120, .3);
+}
+.bottom:hover {
+  background-color: rgba(120, 120, 120, .8);
+  box-shadow: 0 0 0 1px white;
+    transition: all 800ms ease-out;
+}
+
+p {
+  display: flex;
+  color: white;
+}
+.stats {
+  color: yellow;
+  font-size: 1.1em;
+}
 /* Im alreader spacer */
 .spacer {
   height: 40vh;
