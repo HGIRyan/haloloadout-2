@@ -1,0 +1,125 @@
+{
+    "grenades": [
+        {
+            "name": "Frag Grenade",
+            "power": 250,
+            "firingMode": "Explosive",
+            "faction": "Human/UNSC",
+            "id": 3,
+            "img": "https://www.halopedia.org/images/thumb/9/91/H5G-M9.png/300px-H5G-M9.png",
+            "fakeDB":true
+        },
+        {
+            "name": "Plasma Grenade",
+            "power": 250,
+            "firingMode": "Explosive",
+            "faction": "Alien/Coven",
+            "id": 2,
+            "img": "https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/plasma-grenade-e63ed2a67258459882ea3d73ca173237.png",
+            "fakeDB":true
+        },
+        {
+            "name": "Splinter Grenade",
+            "power": 250,
+            "firingMode": "Explosive",
+            "faction": "Promethan",
+            "id": 1,
+            "img": "https://www.halopedia.org/images/thumb/0/0f/Splinter_Grenade.png/300px-Splinter_Grenade.png",
+            "fakeDB":true
+        }
+    ],
+    "SecondaryWeapon": [
+        {
+            "name": "Boltshot",
+            "power": 60,
+            "firingMode": "Semi-Automatic",
+            "capacity": "12 Ionized Particles",
+            "faction": "Promethean",
+            "id": 1,
+            "img": "https://vignette.wikia.nocookie.net/halo/images/b/bb/Boltshot_Render_with_weapon_skin.png/revision/latest?cb=20120816125558",
+            "fakeDB":true
+        },
+        {
+            "name": "Magnum",
+            "power": 72,
+            "firingMode": "Semi-Automatic",
+            "capacity": "8 Rounds",
+            "faction": "Human/UNSC",
+            "id": 2,
+            "img": "https://vignette.wikia.nocookie.net/halo/images/7/7b/H5G_Render_Magnum-M6H2.png/revision/latest?cb=20150704094943",
+            "fakeDB":true
+        },
+        {
+            "name": "Plasma Pistol",
+            "power": 63,
+            "firingMode": "Charged",
+            "capacity": "100 Units",
+            "faction": "Alien/Covenant",
+            "id": 3,
+            "img": "https://vignette.wikia.nocookie.net/halo/images/2/20/H5G_Render_T54DPlasmaPistol.png/revision/latest?cb=20160406114115",
+            "fakeDB":true
+        }
+    ],
+    "primaryWeapon": [
+        {
+            "name": "Assault Rifle",
+            "power": 80,
+            "firingMode": "Automatic",
+            "capacity": "32 Rounds",
+            "faction": "Human/UNSC",
+            "id": 1,
+            "img": "https://img.fireden.net/v/image/1476/91/1476915526627.png",
+            "fakeDB":true
+        },
+        {
+            "name": "Battle Rifle",
+            "power": 105,
+            "firingMode": "Burst",
+            "capacity": "36 Rounds",
+            "faction": "Human/UNSC",
+            "id": 2,
+            "img": "https://i.pinimg.com/originals/ee/be/7e/eebe7e18e2f25da0b45c4bd0fb6b8a7c.png",
+            "fakeDB":true
+        },
+        {
+            "name": "DMR",
+            "power": 105,
+            "firingMode": "Semi-Automatic",
+            "capacity": "14 Rounds",
+            "faction": "Human/UNSC",
+            "id": 3,
+            "img": "https://content.halocdn.com/media/Default/games/halo-5-guardians/media/renders/h5-guardians-render-dmr-fd67bcd0619349eb8d4d135678efac4f.png",
+            "fakeDB":true
+        },
+        {
+            "name": "SMG",
+            "power": 98,
+            "firingMode": "Automatic",
+            "capacity": "60 Rounds",
+            "faction": "Human/UNSC",
+            "id": 4,
+            "img": "https://vignette.wikia.nocookie.net/halo/images/b/b9/H5G_Render_SMG.png/revision/latest?cb=20150618235810",
+            "fakeDB":true
+        },
+        {
+            "name": "Carbine",
+            "power": 100,
+            "firingMode": "Semi-Automatic",
+            "capacity": "18 Rounds",
+            "faction": "Alien/Covenant",
+            "id": 5,
+            "img": "https://vignette.wikia.nocookie.net/halo/images/d/d6/H5G_Render_Carbine.png/revision/latest?cb=20150615212054",
+            "fakeDB":true
+        },
+        {
+            "name": "Needler",
+            "power": 100,
+            "firingMode": "Automatic",
+            "capacity": "22 Shards",
+            "faction": "Alien/Covenent",
+            "id": 6,
+            "img": "https://content.halocdn.com/media/Default/games/halo-5-guardians/tools-of-destruction/weapons/needler-5690d414b19a4b2d83be15baaffa2fe9.png",
+            "fakeDB":true
+        }
+    ]
+}

@@ -16,16 +16,16 @@ export default class GrenadeCurrent extends Component {
     }
     componentDidMount() {
         axios.get('/api/grenade').then(response => {
-            console.log('arr',response.data)
+            console.log('arr', response.data)
             this.setState({
                 grenadeCurrent: response.data
             })
         })
     }
-    addGrenadeItem(id) {
-        console.log('Grenade');
+    addGrenadeItem(grenadeItem) {
+        console.log('Grenade', grenadeItem);
         if (this.state.grenadeCurrent.length < 1) {
-            axios.put(`/api/grenade/${id}`).then(response => {
+            axios.post(`/api/grenade`, grenadeItem).then(response => {
                 this.setState({
                     grenadeCurrent: response.data
                 })
@@ -53,7 +53,7 @@ export default class GrenadeCurrent extends Component {
             <div>
                 <h2> Grenade </h2>
                 <div className='primaryBox'>
-                    <div className='wholeLoadout'>
+                    <div className='wholeloadout'>
                         {mappedGrenadeCurrent}
                     </div>
                     <GrenadeDrop addGrenadeFn={this.addGrenadeItem} />

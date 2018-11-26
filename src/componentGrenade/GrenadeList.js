@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class GrenadeList extends Component {
     constructor() {
         super();
@@ -36,9 +37,9 @@ class GrenadeList extends Component {
         let mappedGrenade = this.state.grenades.map(grenade => {
             return (
                 <div className='individualGrenade' key={grenade.id}>
-                    <img alt={grenade.name} src={grenade.img} />
+                    <img className='individualGrenadeImg' alt={grenade.name} src={grenade.img} />
                     <span>{grenade.name}</span>
-                    <button className='mainButton' onClick={() => this.addItemHandler(grenade.id)}>Add</button>
+                    <button className='mainButton' onClick={() => this.addItemHandler(grenade)}>Add</button>
                 </div>
             )
         })

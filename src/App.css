@@ -107,6 +107,21 @@ h3:hover {
   box-shadow: 0 0 0 1px #152C9F;
   transition: all 800ms ease-out;
 }
+.name {
+  border: none;
+  opacity: 0;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.name:hover {
+  opacity: 1;
+  transition: all 800ms ease-out;
+}
 
 .individualSecondary {
   border: none;
@@ -151,6 +166,8 @@ h3:hover {
 } */
 
 .mainMiddle{
+  /* background-color: white; */
+  /* opacity: .5; */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -166,13 +183,22 @@ h3:hover {
 }
 
 .primaryBox{
+  /* background-color: green; */
   display: flex;
   justify-content: space-evenly;
+  padding-left: 5%;
+  margin-left: 5%;
+}
+.primaryBox:hover {
+  border-radius: 8px;
+  box-shadow: 0 0 0 8px white;
+  transition: all 800ms ease-out;
 }
 
 .wholeloadout {
   width: 50vw;
   height: 20vh;
+  /* background-color: yellow; */
 }
 /* Secondary Weapon Div */
 .secondary{
@@ -180,6 +206,32 @@ h3:hover {
   width: 100%;
   height: auto;
   /* background-color: green; */
+}
+/* Grenade Div */
+.grenade {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.individualGrenade {
+  display: flex;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.individualGrenadeImg {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 50px;
+  max-width: 300px
 }
 
 

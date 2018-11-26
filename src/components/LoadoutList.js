@@ -16,7 +16,7 @@ class LoadoutList extends Component {
                 name: 'Battle Rifle',
                 power: 105,
                 firingMode: 'Burst',
-                capacity: '36 Rounds',
+                capacity: '36 Rounds',  
                 faction: 'Human/UNSC',
                 id: 2,
                 img: 'https://i.pinimg.com/originals/ee/be/7e/eebe7e18e2f25da0b45c4bd0fb6b8a7c.png'
